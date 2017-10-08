@@ -24,13 +24,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Lista novaLista = new Lista();
+        /*Lista novaLista = new Lista();
         novaLista.setNome("Lista1");
         listas.add(novaLista);
 
         Lista novaLista2 = new Lista();
         novaLista2.setNome("Lista2");
-        listas.add(novaLista2);
+        listas.add(novaLista2);*/
 
         listView = (ListView) findViewById(R.id.ListViewListas);
         ArrayAdapter<Lista> adapter = new ArrayAdapter<>(this,

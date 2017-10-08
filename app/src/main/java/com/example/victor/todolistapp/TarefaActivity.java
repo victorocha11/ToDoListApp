@@ -22,18 +22,30 @@ public class TarefaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tarefa);
-
-
         Intent intent = getIntent();
         Bundle dados = intent.getExtras();
-
         nomeDaLista =dados.getString("list_view_value");
         //email=dados.getString("email");
-
         txt = (TextView)findViewById(R.id.textViewMainTarefa);
         txt.setText(nomeDaLista);
 
 
+        ArrayList<Lista> listas = MainActivity.getListas();
+        ArrayList<Tarefa> tare = null;
+
+        for (Lista l: listas) {
+            if(l.getNome().equals(nomeDaLista)){
+                tare = l.getList();
+            }
+        }
+
+        listView = (ListView) findViewById(R.id.ListViewTarefas);
+        if(tare!=null) {
+            ArrayAdapter<Tarefa> adapter = new ArrayAdapter<>(this,
+                    android.R.layout.simple_list_item_1, tare);
+            listView.setAdapter(adapter);
+
+        }
     }
 
 
