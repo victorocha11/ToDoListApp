@@ -11,4 +11,5 @@
     <string name="TituloDetalheTar">Detalhes da Tarefa</string>
     <string name="BtExcluirTarefa">Excluir tarefa</string>
     <string name="BtEditarTarefa">Editar Tarefa</string>
+    <string name="PlaceholderNomeDaLista">Digite o nome da lista</string>
 </resources>

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Lista {
     private String nome;
-    private ArrayList<Tarefa> list = new ArrayList<>();
+    private ArrayList<Tarefa> tarefas = new ArrayList<>();
 
     public String getNome() {
         return nome;
@@ -19,17 +19,15 @@ public class Lista {
     }
 
     public ArrayList<Tarefa> getList() {
-        return list;
+        return tarefas;
     }
 
     public void setList(ArrayList<Tarefa> list) {
-        this.list = list;
+        this.tarefas = list;
     }
 
     @Override
     public String toString() {
-        return "Lista: " +
-                "nome: '" + nome + '\'' +
-                ", \nTarefas: " + list;
+        return nome;
     }
 }

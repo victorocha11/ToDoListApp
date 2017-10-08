@@ -8,13 +8,17 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    private ListView listView;
+    private static ArrayList<Lista> listas = new ArrayList<>();
 
-    private ArrayList<Lista> listas = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,31 +32,49 @@ public class MainActivity extends AppCompatActivity {
         novaLista2.setNome("Lista2");
         listas.add(novaLista2);
 
-        ListView listView = (ListView) findViewById(R.id.ListViewListas);
-
+        listView = (ListView) findViewById(R.id.ListViewListas);
         ArrayAdapter<Lista> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, listas);
 
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            public void onItemClick(AdapterView<?> arg0, View arg1,int arg2, long arg3)
+            {
+                String str = ((TextView) arg1).getText().toString();
+                Toast.makeText(getBaseContext(),str, Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getBaseContext(),TarefaActivity.class);
+                intent.putExtra("list_view_value", str);
+                startActivity(intent);
+            }
+        });
     }
 
     public void adicionarLista(View v){
-       Lista novaLista = new Lista();
-       novaLista.setNome("Lista1");
-       listas.add(novaLista);
+        EditText mEdit   = (EditText)findViewById(R.id.NomeDaLista);
+        if(mEdit.getText().length() == 0) {//como o tamanho é zero é nulla aresposta
+            mEdit.setError("Campo vazio");
+        }else {
+            Lista novaLista = new Lista();
 
-        ListView listView = (ListView) findViewById(R.id.ListViewListas);
-        ArrayAdapter<Lista> adapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1, listas);
-        listView.setAdapter(adapter);
+            String nomeLista = mEdit.getText().toString();
+            novaLista.setNome(nomeLista);
+            listas.add(novaLista);
+
+            listView = (ListView) findViewById(R.id.ListViewListas);
+            ArrayAdapter<Lista> adapter = new ArrayAdapter<>(this,
+                    android.R.layout.simple_list_item_1, listas);
+            listView.setAdapter(adapter);
+
+        }
     }
 
-
-    public ArrayList<Lista> getListas() {
+    public static ArrayList<Lista> getListas() {
         return listas;
     }
 
-    public void setListas(ArrayList<Lista> listas) {
-        this.listas = listas;
+    public static void setListas(ArrayList<Lista> listas) {
+        MainActivity.listas = listas;
     }
 }
