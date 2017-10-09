@@ -13,4 +13,7 @@
     <string name="BtEditarTarefa">Modifier la tâche</string>
     <string name="PlaceholderNomeDaLista">Entrez le nom de la liste</string>
     <string name="HintHora">Heure de fin</string>
+    <string name="HintNomeTarefa">Nom de la tâche ...</string>
+    <string name="HintDescrevaAqui" >Décrivez la tâche ici ...</string>
+    <string name="HintDatadeFim">Date de fin</string>
 </resources>

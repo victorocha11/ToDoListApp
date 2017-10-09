@@ -1,5 +1,6 @@
 package com.example.victor.todolistapp;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Timer;
 
@@ -37,10 +38,13 @@ public class Tarefa {
 
     @Override
     public String toString() {
-        return "Tarefa{" +
-                "nomeTarefa='" + nomeTarefa + '\'' +
-                ", descricaoTarefa='" + descricaoTarefa + '\'' +
-                ", dataFimTarefa=" + dataFimTarefa +
-                '}';
+
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy, HH:mm");
+        String aux= sdf.format(dataFimTarefa);
+
+        return "Tarefa: " +
+                 nomeTarefa +
+                "\nDescrição: " + descricaoTarefa +
+                " \nData e hora do fim da tarefa: " + aux;
     }
 }

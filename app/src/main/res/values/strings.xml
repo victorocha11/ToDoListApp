@@ -13,4 +13,10 @@
     <string name="BtEditarTarefa">Editar Tarefa</string>
     <string name="PlaceholderNomeDaLista">Digite o nome da lista</string>
     <string name="HintHora">Hora de Fim</string>
+    <string name="HintNomeTarefa">Nome da Tarefa...</string>
+    <string name="HintDescrevaAqui">Descreva aqui a tarefa...</string>
+    <string name="HintDatadeFim">Data de Fim</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="configure">Configure</string>
 </resources>

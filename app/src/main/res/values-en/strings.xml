@@ -13,4 +13,7 @@
     <string name="BtEditarTarefa">Edit task</string>
     <string name="PlaceholderNomeDaLista">Type list name</string>
     <string name="HintHora">End Time</string>
+    <string name="HintDescrevaAqui" >Describe your task here...</string>
+    <string name="HintDatadeFim">End Date</string>
+    <string name="HintNomeTarefa">Task name...</string>
 </resources>

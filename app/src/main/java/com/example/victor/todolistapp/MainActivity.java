@@ -73,12 +73,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void chamaconf(View v){
-        Intent intent = new Intent(getBaseContext(),ConfActivity.class);
-        startActivity(intent);
-    }
-
-
     public static ArrayList<Lista> getListas() {
         return listas;
     }
