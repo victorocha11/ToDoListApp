@@ -64,15 +64,27 @@ public class TarefaActivity extends AppCompatActivity {
                 for (Lista l: listas) {
                     if(l.getNome().equals(nomeDaLista)){
                         tare = l.getList();
-                        for(Tarefa t: tare)
-                            if(t.getNomeTarefa().equals(str)){
+                        for(Tarefa t: tare){
+                            if(t.toString().equals(str)) {
                                 tare.remove(t);
                                 l.setList(tare);
+                            }
                         }
                     }
                 }
+                atualizaListview(tare);
+
             }
         });
+    }
+
+    private void atualizaListview(ArrayList<Tarefa> tare){
+        listView = (ListView) findViewById(R.id.ListViewTarefas);
+        if(tare!=null) {
+            ArrayAdapter<Tarefa> adapter = new ArrayAdapter<>(this,
+                    android.R.layout.simple_list_item_1, tare);
+            listView.setAdapter(adapter);
+        }
     }
 
 
