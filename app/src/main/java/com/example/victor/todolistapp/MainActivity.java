@@ -2,6 +2,7 @@ package com.example.victor.todolistapp;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     private ListView listView;
@@ -51,11 +53,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void adicionarLista(View v){
-        EditText mEdit   = (EditText)findViewById(R.id.NomeDaLista);
-        if(mEdit.getText().length() == 0) {//como o tamanho é zero é nulla aresposta
+    public void adicionarLista(View v) {
+        EditText mEdit = (EditText) findViewById(R.id.NomeDaLista);
+        if (mEdit.getText().length() == 0) {//como o tamanho é zero é nulla aresposta
             mEdit.setError("Campo vazio");
-        }else {
+        } else {
             Lista novaLista = new Lista();
 
             String nomeLista = mEdit.getText().toString();
@@ -68,7 +70,14 @@ public class MainActivity extends AppCompatActivity {
             listView.setAdapter(adapter);
 
         }
+
     }
+
+    public void chamaconf(View v){
+        Intent intent = new Intent(getBaseContext(),ConfActivity.class);
+        startActivity(intent);
+    }
+
 
     public static ArrayList<Lista> getListas() {
         return listas;

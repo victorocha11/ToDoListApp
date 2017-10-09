@@ -56,5 +56,13 @@
             android:layout_weight="1"
             android:onClick="adicionarLista"
             android:text="@string/ButtonAddLista" />
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/configIdioma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="chamaconf"
+        android:text="Button" />
 </android.widget.LinearLayout>

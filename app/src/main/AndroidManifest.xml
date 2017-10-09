@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".TarefaActivity" />
-        <activity android:name=".DetalheTarefaActivity"></activity>
+        <activity android:name=".DetalheTarefaActivity" />
+        <activity android:name=".ConfActivity"></activity>
     </application>
 
 </manifest>
