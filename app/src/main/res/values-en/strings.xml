@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">To Do List APP</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="MainTitulo">List \"To Do\"</string>
+    <string name="ButtonAddLista">Add List</string>
+    <string name="MainTituloTarefa">Tasks</string>
+    <string name="AddTarefa">Add Task</string>
+    <string name="ExcluirLista">Delete current list </string>
+    <string name="TituloDetalheTar">Task details</string>
+    <string name="BtExcluirTarefa">Delete task</string>
+    <string name="BtEditarTarefa">Edit task</string>
+    <string name="PlaceholderNomeDaLista">Type list name</string>
+    <string name="HintHora">End Time</string>
+</resources>
