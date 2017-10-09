@@ -12,4 +12,5 @@
     <string name="BtExcluirTarefa">Excluir tarefa</string>
     <string name="BtEditarTarefa">Editar Tarefa</string>
     <string name="PlaceholderNomeDaLista">Digite o nome da lista</string>
+    <string name="HintHora">Hora de Fim</string>
 </resources>
