@@ -9,3 +9,4 @@ How to use:
 4. If you want to delete an task, press on it.
 5. If you want to delete the list, open it, than press on Remove List
 
+This App is available in Portuguese, English, Spanish and French.
